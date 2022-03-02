@@ -1,0 +1,20 @@
+head
+    style
+        include style/widget.css
+include includes/navbar.pug
+.container
+  .background
+    .Circle1
+    .Circle2
+    .Circle3
+    .content
+      h1.Condition
+        i.material-icons.sun
+        |  
+        h1.F="  "+ww.weather[0].description
+        - var fahren= Math.trunc(ww.main.temp-273) * 9 / 5 + 32
+        h1.F="  "+fahren+String.fromCharCode(176)+"F"
+      h1.Time 09:35
+      h1.Location=ww.name
+        i.material-icons.locationIcon 
+        |  

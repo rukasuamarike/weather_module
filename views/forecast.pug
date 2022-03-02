@@ -1,0 +1,11 @@
+doctype html
+html(lang='en')
+    title hi
+    head
+        include includes/navbar.pug
+    body
+        div.forecast-text
+            p=Math.trunc(ww.main.temp-273)+String.fromCharCode(176)+"C"
+            p=ww.weather[0].description
+            p=ww.main.humidity
+        
